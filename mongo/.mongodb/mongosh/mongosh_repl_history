@@ -1,0 +1,12 @@
+show dbs
+db.getName()
+show dbs
+show demo
+db.createUser({ user: "user", pwd: "secret", roles: [ { role: "readWrite", db: "demo" }] })
+show dbs
+use demo
+exit
+db.createCollection('test_col')
+db.getName()
+use demo
+show dbs
